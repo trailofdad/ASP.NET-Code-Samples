@@ -7,6 +7,8 @@ using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Microsoft.AspNet.Identity;
+using System.Linq;
+using MyTunes_ChristianHapgood.Models;
 
 namespace MyTunes_ChristianHapgood
 {
@@ -70,6 +72,13 @@ namespace MyTunes_ChristianHapgood
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        public IQueryable<Genre> GetGenres()
+        {
+            var _db = new MyTunes_ChristianHapgood.Models.MyTunesContext();
+            IQueryable<Genre> query = _db.Genres;
+            return query;
         }
 
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)

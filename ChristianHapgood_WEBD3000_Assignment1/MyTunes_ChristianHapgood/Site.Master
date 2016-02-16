@@ -6,7 +6,7 @@
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> - My ASP.NET Application</title>
+    <title><%: Page.Title %> - My Tunes</title>
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
@@ -46,13 +46,14 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" runat="server" href="~/">Application name</a>
+                    <a class="navbar-brand" runat="server" href="~/">My Tunes</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/">Home</a></li>
                         <li><a runat="server" href="~/About">About</a></li>
                         <li><a runat="server" href="~/Contact">Contact</a></li>
+                        <li><a runat="server" href="~/MusicList">Music</a></li>
                     </ul>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
@@ -73,12 +74,36 @@
                 </div>
             </div>
         </div>
+       
+         <%--Put logo image here--%>
+        <div id="TitleContent" style="text-align: center">
+            <a runat="server" href="~/">
+                <asp:Image  ID="Image1" runat="server" ImageUrl="~/Images/logo.png" BorderStyle="None" />
+            </a>  
+            <br />  
+        </div>
+        <%-- Create list view for Genres on master DO I WANT THIS?? --%>
+        <%--<div id="GenreMenu" style="text-align: center">       
+            <asp:ListView ID="GenreList"  
+                ItemType="MyTunes_ChristianHapgood.Models.Genre" 
+                runat="server"
+                SelectMethod="GetGenres" >
+                <ItemTemplate>
+                    <b style="font-size: large; font-style: normal">
+                        <a href="/MusicList.aspx?id=<%#: Item.GenreId %>">
+                        <%#: Item.Name %>
+                        </a>
+                    </b>
+                </ItemTemplate>
+                <ItemSeparatorTemplate>  |  </ItemSeparatorTemplate>
+            </asp:ListView>
+        </div>--%>
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+                <p>&copy; <%: DateTime.Now.Year %> - My Tunes</p>
             </footer>
         </div>
     </form>
