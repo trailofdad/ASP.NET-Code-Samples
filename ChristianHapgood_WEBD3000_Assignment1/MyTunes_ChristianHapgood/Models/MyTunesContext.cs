@@ -42,6 +42,16 @@ namespace MyTunes_ChristianHapgood.Models
             modelBuilder.Entity<Track>()
                 .Property(e => e.UnitPrice)
                 .HasPrecision(10, 2);
+
+            modelBuilder.Entity<Album>()
+                .HasMany(e => e.Tracks)
+                .WithRequired(e => e.Album)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Genre>()
+                .HasMany(e => e.Tracks)
+                .WithRequired(e => e.Genre)
+                .WillCascadeOnDelete(false);
         }
     }
 }

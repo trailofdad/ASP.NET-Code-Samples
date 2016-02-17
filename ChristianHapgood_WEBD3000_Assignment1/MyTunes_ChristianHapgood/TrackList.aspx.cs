@@ -16,13 +16,13 @@ namespace MyTunes_ChristianHapgood
 
         }
 
-        public IQueryable<Track> GetTracks([QueryString("id")] int? trackId)
+        public IQueryable<Track> GetTracks([QueryString("genreId")] int? genreId)
         {
             var _db = new MyTunes_ChristianHapgood.Models.MyTunesContext();
             IQueryable<Track> query = _db.Tracks;
-            if (trackId.HasValue && trackId > 0)
+            if (genreId.HasValue && genreId > 0)
             {
-                query = query.Where(p => p.TrackId == trackId);
+                query = query.Where(p => p.GenreId == genreId);
             }
             return query;
         }
