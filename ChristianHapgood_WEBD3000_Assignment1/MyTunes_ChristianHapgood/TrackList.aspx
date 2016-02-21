@@ -39,7 +39,12 @@
                                             <%#:Item.Name%>
                                         </span>
                                     </a>
-                                    <br />                                
+                                    <br />  
+                                    <a href="/AddToCart.aspx?trackId=<%#:Item.TrackId %>">               
+                                        <span class="TrackListItem">
+                                            <b>Add To Cart<b>
+                                        </span>           
+                                    </a>                              
                                 </td>
                             </tr>
                             <tr>

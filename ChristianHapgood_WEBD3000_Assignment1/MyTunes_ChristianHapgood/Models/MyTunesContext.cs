@@ -14,13 +14,14 @@ namespace MyTunes_ChristianHapgood.Models
 
         public virtual DbSet<Album> Albums { get; set; }
         public virtual DbSet<Artist> Artists { get; set; }
-        public virtual DbSet<CartItem> CartItems { get; set; }
+        //public virtual DbSet<CartItem> CartItems { get; set; }
         public virtual DbSet<Genre> Genres { get; set; }
         public virtual DbSet<MediaCategory> MediaCategories { get; set; }
         public virtual DbSet<MediaType> MediaTypes { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<OrderDetail> OrderDetails { get; set; }
         public virtual DbSet<Track> Tracks { get; set; }
+        public DbSet<CartItem> ShoppingCartItems { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

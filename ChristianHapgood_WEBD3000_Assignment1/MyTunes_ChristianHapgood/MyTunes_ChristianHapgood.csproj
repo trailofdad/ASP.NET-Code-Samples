@@ -200,10 +200,19 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="AddToCart.aspx" />
+    <Content Include="AlbumList.aspx" />
+    <Content Include="AlbumTrackList.aspx" />
     <Content Include="App_Data\MyTunes.mdf" />
     <Content Include="App_Data\MyTunes_log.ldf">
       <DependentUpon>MyTunes.mdf</DependentUpon>
     </Content>
+    <Content Include="ArtistList.aspx" />
+    <Content Include="ArtistTrackList.aspx" />
+    <Content Include="MediaList.aspx" />
+    <Content Include="MediaTrackList.aspx" />
+    <Content Include="ShoppingCart.aspx" />
+    <Content Include="TrackDetails.aspx" />
     <Content Include="TrackList.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
@@ -374,6 +383,70 @@
     </Compile>
     <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddToCart.aspx.cs">
+      <DependentUpon>AddToCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddToCart.aspx.designer.cs">
+      <DependentUpon>AddToCart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AlbumList.aspx.cs">
+      <DependentUpon>AlbumList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AlbumList.aspx.designer.cs">
+      <DependentUpon>AlbumList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AlbumTrackList.aspx.cs">
+      <DependentUpon>AlbumTrackList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AlbumTrackList.aspx.designer.cs">
+      <DependentUpon>AlbumTrackList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ArtistList.aspx.cs">
+      <DependentUpon>ArtistList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ArtistList.aspx.designer.cs">
+      <DependentUpon>ArtistList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ArtistTrackList.aspx.cs">
+      <DependentUpon>ArtistTrackList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ArtistTrackList.aspx.designer.cs">
+      <DependentUpon>ArtistTrackList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logic\ShoppingCartActions.cs" />
+    <Compile Include="MediaList.aspx.cs">
+      <DependentUpon>MediaList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MediaList.aspx.designer.cs">
+      <DependentUpon>MediaList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MediaTrackList.aspx.cs">
+      <DependentUpon>MediaTrackList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MediaTrackList.aspx.designer.cs">
+      <DependentUpon>MediaTrackList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShoppingCart.aspx.cs">
+      <DependentUpon>ShoppingCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShoppingCart.aspx.designer.cs">
+      <DependentUpon>ShoppingCart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TrackDetails.aspx.cs">
+      <DependentUpon>TrackDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TrackDetails.aspx.designer.cs">
+      <DependentUpon>TrackDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="TrackList.aspx.cs">
       <DependentUpon>TrackList.aspx</DependentUpon>
