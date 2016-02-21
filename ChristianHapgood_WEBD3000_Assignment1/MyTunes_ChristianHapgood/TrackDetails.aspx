@@ -23,7 +23,13 @@
                         <span><b>Composer:</b>&nbsp;<%#:Item.Composer %></span>
                         <br />
                         <span><b>Duration:</b>&nbsp;<%#:Math.Round((Item.Milliseconds / 60000.00), 2) %>&nbsp;minutes</span>
-                        <br />                        
+                        <br /> 
+                        <br />
+                        <a href="/AddToCart.aspx?trackId=<%#:Item.TrackId %>">               
+                                        <span class="TrackListItem">
+                                            <b>Add To Cart<b>
+                                        </span>           
+                                    </a>                        
                     </td>
                 </tr>
             </table>
