@@ -17,7 +17,7 @@
     <AssemblyName>MyTunes_ChristianHapgood</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
-    <IISExpressSSLPort />
+    <IISExpressSSLPort>44300</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -201,6 +201,7 @@
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="AddToCart.aspx" />
+    <Content Include="Admin\AdminPage.aspx" />
     <Content Include="AlbumList.aspx" />
     <Content Include="AlbumTrackList.aspx" />
     <Content Include="App_Data\MyTunes.mdf" />
@@ -209,6 +210,11 @@
     </Content>
     <Content Include="ArtistList.aspx" />
     <Content Include="ArtistTrackList.aspx" />
+    <Content Include="Checkout\CheckoutCancel.aspx" />
+    <Content Include="Checkout\CheckoutComplete.aspx" />
+    <Content Include="Checkout\CheckoutError.aspx" />
+    <Content Include="Checkout\CheckoutReview.aspx" />
+    <Content Include="Checkout\CheckoutStart.aspx" />
     <Content Include="MediaList.aspx" />
     <Content Include="MediaTrackList.aspx" />
     <Content Include="ShoppingCart.aspx" />
@@ -226,6 +232,8 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Checkout\Web.config" />
+    <Content Include="Admin\Web.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Images\logo.png" />
     <Content Include="MusicList.aspx" />
@@ -391,6 +399,13 @@
     <Compile Include="AddToCart.aspx.designer.cs">
       <DependentUpon>AddToCart.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\AdminPage.aspx.cs">
+      <DependentUpon>AdminPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminPage.aspx.designer.cs">
+      <DependentUpon>AdminPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AlbumList.aspx.cs">
       <DependentUpon>AlbumList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -419,6 +434,44 @@
     <Compile Include="ArtistTrackList.aspx.designer.cs">
       <DependentUpon>ArtistTrackList.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Checkout\CheckoutCancel.aspx.cs">
+      <DependentUpon>CheckoutCancel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Checkout\CheckoutCancel.aspx.designer.cs">
+      <DependentUpon>CheckoutCancel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Checkout\CheckoutComplete.aspx.cs">
+      <DependentUpon>CheckoutComplete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Checkout\CheckoutComplete.aspx.designer.cs">
+      <DependentUpon>CheckoutComplete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Checkout\CheckoutError.aspx.cs">
+      <DependentUpon>CheckoutError.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Checkout\CheckoutError.aspx.designer.cs">
+      <DependentUpon>CheckoutError.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Checkout\CheckoutReview.aspx.cs">
+      <DependentUpon>CheckoutReview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Checkout\CheckoutReview.aspx.designer.cs">
+      <DependentUpon>CheckoutReview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Checkout\CheckoutStart.aspx.cs">
+      <DependentUpon>CheckoutStart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Checkout\CheckoutStart.aspx.designer.cs">
+      <DependentUpon>CheckoutStart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logic\AddTracks.cs" />
+    <Compile Include="Logic\PayPalFunctions.cs" />
+    <Compile Include="Logic\RoleActions.cs" />
     <Compile Include="Logic\ShoppingCartActions.cs" />
     <Compile Include="MediaList.aspx.cs">
       <DependentUpon>MediaList.aspx</DependentUpon>
@@ -541,7 +594,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>49914</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:49914/</IISUrl>
+          <IISUrl>https://localhost:44300/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

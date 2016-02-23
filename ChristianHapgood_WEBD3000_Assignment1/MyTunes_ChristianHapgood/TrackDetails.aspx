@@ -12,7 +12,7 @@
                         <br />
                         <span><b>Price:</b>&nbsp;<%#: String.Format("{0:c}", Item.UnitPrice) %></span>
                         <br />                            
-                        <span><b>Artist:<%--</b>&nbsp;<%#:Artist.Name %></span>--%>
+                        <span><b>Artist:</b>&nbsp;<%#:Item.Album.Artist.Name %></span>
                         <br />
                         <span><b>Album:</b>&nbsp;<%#:Item.Album.Title %></span>
                         <br />

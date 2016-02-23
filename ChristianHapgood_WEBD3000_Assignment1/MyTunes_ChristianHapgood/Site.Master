@@ -50,9 +50,13 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
+                        <li><a runat="server" id="adminLink" visible="false" 
+                         href="~/Admin/AdminPage">Admin</a></li>
                         <li><a runat="server" href="~/">Home</a></li>                        
                         <li><a runat="server" href="~/MusicList">Genres</a></li>
                         <li><a runat="server" href="~/ArtistList">Artists</a></li>
+                        <li><a runat="server" href="~/AlbumList">Albums</a></li>
+                        <li><a runat="server" href="~/MediaList">Media Category</a></li>
                         <li><a runat="server" href="~/About">About</a></li>
                         <li><a runat="server" href="~/Contact">Contact</a></li>
                         <li><a runat="server" href="~/ShoppingCart" ID="cartCount">&nbsp;</a></li>

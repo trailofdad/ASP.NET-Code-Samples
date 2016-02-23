@@ -15,9 +15,9 @@ namespace MyTunes_ChristianHapgood.Models
 
         public string Username { get; set; }
 
-        public int ProductId { get; set; }
+        public int TrackId { get; set; }
 
-        public double? UnitPrice { get; set; }
+        public decimal? UnitPrice { get; set; }
 
         public virtual Order Order { get; set; }
     }

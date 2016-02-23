@@ -25,6 +25,13 @@ namespace MyTunes_ChristianHapgood.Account
                 //manager.SendEmail(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>.");
 
                 signInManager.SignIn( user, isPersistent: false, rememberBrowser: false);
+
+                using (MyTunes_ChristianHapgood.Logic.ShoppingCartActions usersShoppingCart = new MyTunes_ChristianHapgood.Logic.ShoppingCartActions())
+                {
+                    String cartId = usersShoppingCart.GetCartId();
+                    usersShoppingCart.MigrateCart(cartId, user.Id);
+                }
+
                 IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
             }
             else 

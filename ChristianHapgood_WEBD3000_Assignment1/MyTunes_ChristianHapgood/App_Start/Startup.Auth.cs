@@ -55,9 +55,9 @@ namespace MyTunes_ChristianHapgood
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "1018935851519535",
+               appSecret: "38b7d7b3837dd877931739c241b4fa70");
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{

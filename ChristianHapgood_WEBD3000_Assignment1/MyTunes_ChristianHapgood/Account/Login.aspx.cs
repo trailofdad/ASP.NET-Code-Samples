@@ -38,6 +38,11 @@ namespace MyTunes_ChristianHapgood.Account
                 switch (result)
                 {
                     case SignInStatus.Success:
+
+                        MyTunes_ChristianHapgood.Logic.ShoppingCartActions usersShoppingCart = new MyTunes_ChristianHapgood.Logic.ShoppingCartActions();
+                        String cartId = usersShoppingCart.GetCartId();
+                        usersShoppingCart.MigrateCart(cartId, Email.Text);
+
                         IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
                         break;
                     case SignInStatus.LockedOut:

@@ -88,12 +88,10 @@ namespace MyTunes_ChristianHapgood.Logic
             // Multiply product price by quantity of that product to get        
             // the current price for each of those products in the cart.  
             // Sum all product price totals to get the cart total.   
-            decimal? total = decimal.Zero;
-            total = (decimal?)(from cartItems in _db.ShoppingCartItems
-                               where cartItems.CartId == ShoppingCartId
-                               select (int?)
-                               cartItems.Track.UnitPrice).Sum();
-            return total ?? decimal.Zero;
+            decimal? count = (from cartItems in _db.ShoppingCartItems
+                              where cartItems.CartId == ShoppingCartId
+                              select (decimal?)cartItems.Track.UnitPrice).Sum();
+            return count ?? 0;
         }
 
         public ShoppingCartActions GetCart(HttpContext context)
@@ -210,6 +208,17 @@ namespace MyTunes_ChristianHapgood.Logic
             public int TrackId;
             public int PurchaseQuantity;
             public bool RemoveItem;
+        }
+
+        public void MigrateCart(string cartId, string userName)
+        {
+            var shoppingCart = _db.ShoppingCartItems.Where(c => c.CartId == cartId);
+            foreach (CartItem item in shoppingCart)
+            {
+                item.CartId = userName;
+            }
+            HttpContext.Current.Session[CartSessionKey] = userName;
+            _db.SaveChanges();
         }
     }
 }

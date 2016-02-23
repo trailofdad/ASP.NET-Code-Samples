@@ -29,12 +29,12 @@
                         <table>
                             <tr>
                                 <td>
-                                    <a href="TrackList.aspx?artistId=<%#:Item.ArtistId%>">
+                                    <a href="ArtistTrackList.aspx?artistId=<%#:Item.ArtistId%>">
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <a href="TrackList.aspx?artistId=<%#:Item.ArtistId%>">
+                                    <a href="ArtistTrackList.aspx?artistId=<%#:Item.ArtistId%>">
                                         <span>
                                             <%#:Item.Name%>
                                         </span>
