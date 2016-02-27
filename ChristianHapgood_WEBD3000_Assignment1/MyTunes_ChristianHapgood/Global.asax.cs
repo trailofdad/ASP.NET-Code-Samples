@@ -19,11 +19,13 @@ namespace MyTunes_ChristianHapgood
             // Code that runs on application startup
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            // Create the custom role and user.
+            RoleActions roleActions = new RoleActions();
+            roleActions.AddUserAndRole();
         }
 
-        // Create the custom role and user.
-        //RoleActions roleActions = new RoleActions();
-        //roleActions.AddUserAndRole();
+
 
         //application level error handling 
         void Application_Error(object sender, EventArgs e)

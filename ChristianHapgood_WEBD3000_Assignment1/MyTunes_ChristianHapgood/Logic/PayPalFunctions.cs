@@ -44,6 +44,12 @@ public class NVPAPICaller
     private const int Timeout = 15000;
     private static readonly string[] SECURED_NVPS = new string[] { ACCT, CVV2, SIGNATURE, PWD };
 
+    public NVPAPICaller()
+    {
+        System.Net.ServicePointManager.SecurityProtocol =  SecurityProtocolType.Tls12;
+
+    }
+
     public void SetCredentials(string Userid, string Pwd, string Signature)
     {
         APIUsername = Userid;
