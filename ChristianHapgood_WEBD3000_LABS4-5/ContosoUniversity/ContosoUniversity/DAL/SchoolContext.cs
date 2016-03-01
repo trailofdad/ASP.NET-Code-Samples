@@ -15,6 +15,8 @@ namespace ContosoUniversity.DAL
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            this.Configuration.LazyLoadingEnabled = false;
+
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
 
             modelBuilder.Entity<Course>()
@@ -22,6 +24,8 @@ namespace ContosoUniversity.DAL
                 .Map(t => t.MapLeftKey("CourseID")
                     .MapRightKey("InstructorID")
                     .ToTable("CourseInstructor"));
+
+
         }
     }
 }
