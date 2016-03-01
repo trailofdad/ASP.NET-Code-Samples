@@ -152,6 +152,14 @@
     <Compile Include="Migrations\201602291904344_InitialCreate.Designer.cs">
       <DependentUpon>201602291904344_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201603011405423_MaxLengthOnNames.cs" />
+    <Compile Include="Migrations\201603011405423_MaxLengthOnNames.Designer.cs">
+      <DependentUpon>201603011405423_MaxLengthOnNames.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603011407270_ColumnFirstName.cs" />
+    <Compile Include="Migrations\201603011407270_ColumnFirstName.Designer.cs">
+      <DependentUpon>201603011407270_ColumnFirstName.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Enrollment.cs" />
@@ -169,6 +177,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Properties\PublishProfiles\WEBD3000 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -216,6 +225,12 @@
     <EmbeddedResource Include="Migrations\201602291904344_InitialCreate.resx">
       <DependentUpon>201602291904344_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603011405423_MaxLengthOnNames.resx">
+      <DependentUpon>201603011405423_MaxLengthOnNames.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603011407270_ColumnFirstName.resx">
+      <DependentUpon>201603011407270_ColumnFirstName.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -235,7 +250,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>49826</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:49826/</IISUrl>
+          <IISUrl>http://localhost:8080/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
